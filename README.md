@@ -32,8 +32,11 @@ They are ModifiedModel(d, Yield, Rad, den, z) and ImpulseModel(d, Yield, Rad, de
 
 ## Contributing
 
-Please read [CONTRIBUTING.md](CONTRIBUTING.md) for details on our code of conduct, and the process for submitting pull requests to us.
+Please read [CONTRIBUTING.md](CONTRIBUTING.md) for details on contributing to the project, and the process for submitting pull requests to us.
 
+## Code of Conduct
+
+Our code of conduct is available at [Code of Conduct](CODE_OF_CONDUCT.md).
 
 ## Authors
 
