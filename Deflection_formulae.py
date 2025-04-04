@@ -54,7 +54,7 @@ def Original_Formula_dim(x, yp) :
     Implement the original dimensionless deflection formula including 
     the low fluence case
     x  - HOB or standoff (m) / radius of asteroid (m)
-    yp - Yield (kt)/(b D^2)
+    yp - Yield (kt)/(b HOB^2)
     """
     
     # mu_1 is cosine of angle where melt sets in
@@ -89,7 +89,7 @@ def OriginalModel(d, Yield, Rad, den, z=AB2):
     # dimensionless HOB
     x = d/Rad
     Fluence = np.log10(Yield/(4*math.pi*Standoff*Standoff))
-    Fluence = min(Fluence, 0.0) # This gives better behavior for small d
+    Fluence = np.minimum(Fluence, 0.0) # This gives better behavior for small d
     # calculate fit coefficients from the fluence
     A = (z[0][0]*Fluence + z[0][1])*Fluence + z[0][2]
     B = (z[1][0]*Fluence + z[1][1])*Fluence + z[1][2]
@@ -104,7 +104,7 @@ def Modified_Formula_dim(x, yp) :
     """
     Implement the deflection formula with the incident angle dependent melt depth 
     x - HOB or standoff (m) / radius of asteroid (m)
-    yp - Yield (kt)/(b D^2)
+    yp - Yield (kt)/(b HOB^2)
     """
     
     # mu_1 is cosine of tangency angle, mu_t is the tangency angle
@@ -156,7 +156,7 @@ def Impulse_integrand(mu, x, yp):
     integrand for the impulse integral.
     mu - value of the angle
     x  - D/R - (HOB or standoff (m))/(radius of asteroid (m))
-    yp - Yield (kt)/(b D^2)
+    yp - Yield (kt)/(b HOB^2)
     """
     ssqr = 1.0 + (1.0 + x)**2 - 2.0*(1.0 + x)*mu
     Term = yp*x*x/(ssqr) - 1.0
