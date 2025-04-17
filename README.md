@@ -29,6 +29,16 @@ It uses the preferred formula, OriginalModel(d, Yield, Rad, den, z), where d is 
 For completeness the other two formulae given in [PDC_2021_Managan](Managan_PDC_2021.pdf) are also included.
 They are ModifiedModel(d, Yield, Rad, den, z) and ImpulseModel(d, Yield, Rad, den, z).
 
+## Release 2
+
+This release adds routines that allow the fit to depend on the asteroid porosity.
+The new routines are OriginalModel_Por_errs(d, Yield, Rad, den, por, z, covariance), ModifiedModel_Por_errs(d, Yield, Rad, den, por, z, covariance). 
+The main difference from OriginalModel and ModifiedModel is that they return both the delta V and the error on those values.
+Numpy arrays can be used for d, Yield, Rad, den, por if they can be broadcast to the same shape.
+Usually one of them is an array and the others are constants, or they are all arrays of the same length.
+The coefficients z default to AB_Si_1_2keV and the covariance to AB_Si_1_2keV_covariance which are the fit for SiO2 to the average delta V of the 1 and 2 keV simulations.
+To get results for Forsterite use AB_Fo_1_2keV and AB_Fo_1_2keV_covariance. For results based on 1 keV values use AB_Si_1keV and AB_Si_1keV_covariance and similarly for 2 keV.
+The various coefficeints have all been moved to the file Fit_Data.py.
 
 ## Contributing
 
@@ -40,7 +50,7 @@ Our code of conduct is available at [Code of Conduct](CODE_OF_CONDUCT.md).
 
 ## Authors
 
-* **Robert Managan** - *Initial work* - [Managan](https://people.llnl.gov/managan1)
+* **Robert Managan** - *Initial work*, *Release 2* - [Managan](https://people.llnl.gov/managan1)
 * **Mary Burkey** - *Initial work* - [Burkey](https://people.llnl.gov/burkey1)
 
 See also the list of [contributors](CONTRIBUTING.md) who participated in this project.
