@@ -40,7 +40,7 @@ Usually one of them is an array and the others are constants, or they are all ar
 The coefficient `z` defaults to `AB_Si_1_2keV` and `covariance` defaults to `AB_Si_1_2keV_covariance` which are the fit for SiO2 to the average delta-V of the 1 and 2 keV simulations.
 To get results for Forsterite use `AB_Fo_1_2keV` and `AB_Fo_1_2keV_covariance`.
 For results based on 1 keV values use `AB_Si_1keV` and `AB_Si_1keV_covariance` and similarly for 2 keV.
-The various coefficeints have all been moved to the file Fit_Data.py.
+The various coefficients have all been moved to the file Fit_Data.py.
 
 ## Contributing
 
