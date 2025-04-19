@@ -20,7 +20,7 @@ por   = 0.245
 # test a range of heights of burst for SiO2, use default coefficients
 d = np.linspace(10, 110, num=11)
 dv, dvError = OriginalModel_Por_errs(d, Yield, Rad, den, por)
-print("Radius %f m, Yield %f kt, den %f g/cm^3, por = %f"%(Rad, Yield, den, por))
+print("SiO2  Radius %f m, Yield %f kt, den %f g/cm^3, por = %f"%(Rad, Yield, den, por))
 for i in range(len(d)):
     print("HOB %8.2f m gives DeltaV %f +- %f cm/s "%(d[i], dv[i], dvError[i]))
 d = 50
@@ -29,7 +29,7 @@ d = 50
 print()
 Yield = np.linspace(100, 1000, num=10)
 dv, dvError = OriginalModel_Por_errs(d, Yield, Rad, den, por, AB_Fo_1_2keV, AB_Fo_1_2keV_covariance)
-print("Radius %f m, HOB %f m, den %f g/cm^3, por = %f, T = 2 keV "%(Rad, d, den, por))
+print("Forsterite  Radius %f m, HOB %f m, den %f g/cm^3, por = %f, T = 2 keV "%(Rad, d, den, por))
 for i in range(len(Yield)):
     print("Yield %8.2f kt gives DeltaV %f +- %f cm/s "%(Yield[i], dv[i], dvError[i]))
 
