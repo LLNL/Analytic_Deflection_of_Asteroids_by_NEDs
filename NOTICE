@@ -1,3 +1,12 @@
+# Copyright (c) 2025, Lawrence Livermore National Security, LLC
+#
+# LLNL-CODE-853603
+#
+# SPDX-License-Identifier: (BSD-3-Clause)
+#------------------------------------------------------------------------------
+# Analytic_Deflection_of_Asteroids_by_NEDs project
+#------------------------------------------------------------------------------
+
 This work was produced under the auspices of the U.S. Department of
 Energy by Lawrence Livermore National Laboratory under Contract
 DE-AC52-07NA27344.

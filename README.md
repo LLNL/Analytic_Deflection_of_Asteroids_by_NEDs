@@ -74,5 +74,10 @@ text in the license header:
 
     SPDX-License-Identifier: (BSD-3-Clause)
 
+# Copyright (c) 2025, Lawrence Livermore National Security, LLC
+#
+# LLNL-CODE-853603
+#
+
 
 

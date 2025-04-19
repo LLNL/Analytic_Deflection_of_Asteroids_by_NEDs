@@ -23,5 +23,6 @@ please add your name to the list below as part of your commit.
 
 # Contributors (In Alphabetical Order)
 
+* Mary Burkey
 * Robert Managan
 
